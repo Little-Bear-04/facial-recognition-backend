@@ -4,7 +4,8 @@ const bcrypt = require('bcrypt-nodejs');
 const cors = require('cors');
 const knex = require('knex');
 
-const register = require('./Controllers/register');
+// const register = require('./Controllers/register');
+import { handleRegister } from './Controllers/register';
 const signin = require('./Controllers/signin');
 const profile = require('./Controllers/profile');
 const image = require('./Controllers/image');
@@ -12,10 +13,10 @@ const image = require('./Controllers/image');
 const db = knex({
     client: 'pg',
     connection: {
-        host : 'dpg-ckt8erm5or3s73d0tsfg-a.frankfurt-postgres.render.com',
-        user : 'VcPutTgyQfX2lRIhsEBGbtYuh78j95N2',
-        password : 'VcPutTgyQfX2lRIhsEBGbtYuh78j95N2',
-        database : 'facial_recognition_azd7'
+        host : '127.0.0.1',
+        user : 'postgres',
+        password : 'test',
+        database : 'facialrecognition'
     }
 });
 
