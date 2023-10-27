@@ -29,8 +29,8 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.get('/', (req, res) => {
-    res.set('Access-Control-Allow-Origin', '*');
-    res.send(db.users) 
+    // res.set('Access-Control-Allow-Origin', '*');
+    res.send(db.users); 
 })
 
 app.post('/signin', (req, res) => { signin.handleSignin(req, res, db, bcrypt) })
