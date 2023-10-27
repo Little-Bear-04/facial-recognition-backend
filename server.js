@@ -5,7 +5,7 @@ const cors = require('cors');
 const knex = require('knex');
 
 // const register = require('./Controllers/register');
-import { handleRegister } from './Controllers/register.js';
+import { handleRegister } from './Controllers/register';
 const signin = require('./Controllers/signin.js');
 const profile = require('./Controllers/profile.js');
 const image = require('./Controllers/image.js');
