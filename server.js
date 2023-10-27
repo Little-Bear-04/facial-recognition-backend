@@ -13,7 +13,7 @@ const image = require('./Controllers/image');
 const db = knex({
     client: 'pg',
     connection: {
-        connectionString: process.env.https://facial-recognition-back-end.onrender.com,
+        connectionString: 'https://facial-recognition-back-end.onrender.com',
         ssl: {rejectUnauthorized: false},
         host : 'dpg-ckt8erm5or3s73d0tsfg-a.frankfurt-postgres.render.com',
         port: 5432,
