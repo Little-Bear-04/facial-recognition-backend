@@ -5,10 +5,10 @@ const cors = require('cors');
 const knex = require('knex');
 
 // const register = require('./Controllers/register');
-import { handleRegister } from './Controllers/register';
-const signin = require('./Controllers/signin');
-const profile = require('./Controllers/profile');
-const image = require('./Controllers/image');
+import { handleRegister } from './Controllers/register.js';
+const signin = require('./Controllers/signin.js');
+const profile = require('./Controllers/profile.js');
+const image = require('./Controllers/image.js');
 
 const db = knex({
     client: 'pg',
