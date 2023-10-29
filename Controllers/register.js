@@ -29,8 +29,8 @@ const handleRegister = (req, res, db, bcrypt) => {
     .catch(err => res.status(400).json('Error registering - sorry!'))
 }
 
-export default handleRegister;
+// export default handleRegister;
 
-//module.exports = {
-//    handleRegister: handleRegister
-//}
+module.exports = {
+    handleRegister: handleRegister
+}
