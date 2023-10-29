@@ -10,18 +10,31 @@ const signin = require('./Controllers/signin.js');
 const profile = require('./Controllers/profile.js');
 const image = require('./Controllers/image.js');
 
-const db = knex({
-    client: 'pg',
-    connection: {
-        connectionString: 'https://facial-recognition-back-end.onrender.com',
-        ssl: {rejectUnauthorized: false},
-        host : 'dpg-ckt8erm5or3s73d0tsfg-a.frankfurt-postgres.render.com',
-        port: 5432,
-        user : 'VcPutTgyQfX2lRIhsEBGbtYuh78j95N2',
-        password : 'VcPutTgyQfX2lRIhsEBGbtYuh78j95N2',
-        database : 'VcPutTgyQfX2lRIhsEBGbtYuh78j95N2'
-    }
+const db = knex({ 
+    client: 'pg', 
+    connection: { 
+        connectionString: process.env.facial-recognition-back-end.onrender.com, 
+        host : process.env.dpg-ckt8erm5or3s73d0tsfg-a.frankfurt-postgres.render.com, 
+        port : 5432, 
+        user : process.env.VcPutTgyQfX2lRIhsEBGbtYuh78j95N2, 
+        password : process.env.DB_VcPutTgyQfX2lRIhsEBGbtYuh78j95N2, 
+        database : process.env.VcPutTgyQfX2lRIhsEBGbtYuh78j95N2, 
+        ssl: {rejectUnauthorized: false} 
+    } 
 });
+
+//const db = knex({
+    //client: 'pg',
+    //connection: {
+    //    connectionString: 'https://facial-recognition-back-end.onrender.com',
+    //   ssl: {rejectUnauthorized: false},
+    //    host : 'dpg-ckt8erm5or3s73d0tsfg-a.frankfurt-postgres.render.com',
+    //    port: 5432,
+    //   user : 'VcPutTgyQfX2lRIhsEBGbtYuh78j95N2',
+    //    password : 'VcPutTgyQfX2lRIhsEBGbtYuh78j95N2',
+    //   database : 'VcPutTgyQfX2lRIhsEBGbtYuh78j95N2'
+    //}
+//});
 
 const app = express ();
 
