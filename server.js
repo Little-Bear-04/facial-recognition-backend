@@ -10,29 +10,30 @@ const signin = require('./Controllers/signin.js');
 const profile = require('./Controllers/profile.js');
 const image = require('./Controllers/image.js');
 
-//const db = knex({ 
-//    client: 'pg', 
-//   connection: { 
-//        connectionString: process.env.postgres://facial_recognition_azd7_user:VcPutTgyQfX2lRIhsEBGbtYuh78j95N2@dpg-ckt8erm5or3s73d0tsfg-a.frankfurt-postgres.render.com/facial_recognition_azd7, 
-//        host : process.env.dpg-ckt8erm5or3s73d0tsfg-a.frankfurt-postgres.render.com, 
-//        port : 5432, 
-//        user : process.env.VcPutTgyQfX2lRIhsEBGbtYuh78j95N2, 
-//        password : process.env.DB_VcPutTgyQfX2lRIhsEBGbtYuh78j95N2, 
-//        database : process.env.VcPutTgyQfX2lRIhsEBGbtYuh78j95N2, 
-//       ssl: {rejectUnauthorized: false} 
-//    } 
-//});
-
-const db = knex({
-    client: 'pg',
-    connection: {
-        host : 'dpg-ckt8erm5or3s73d0tsfg-a.frankfurt-postgres.render.com',
-        port: 5432,
-        user : 'VcPutTgyQfX2lRIhsEBGbtYuh78j95N2',
-        password : 'VcPutTgyQfX2lRIhsEBGbtYuh78j95N2',
-        database : 'VcPutTgyQfX2lRIhsEBGbtYuh78j95N2'
-    }
+const db = knex({ 
+    client: 'pg', 
+       connection: { 
+          connectionString: process.env.DATBASE_URL_EXTERNAL, 
+          ssl: {rejectUnauthorized: false}, 
+          host : process.env.DATABASE_HOST, 
+          port : 5432, 
+          user : process.env.DATABASE_USER, 
+          password : process.env.DATABASE_PSQL_PASSWORD, 
+          database : process.env.DATABASE, 
+    } 
 });
+
+//const db = knex({
+    //client: 'pg',
+    //connection: {
+        //connectionString: process.env.DATABASE_
+        //ssl: true;
+        //port: 5432,
+        //user : 'VcPutTgyQfX2lRIhsEBGbtYuh78j95N2',
+        //password : 'VcPutTgyQfX2lRIhsEBGbtYuh78j95N2',
+        //database : 'VcPutTgyQfX2lRIhsEBGbtYuh78j95N2'
+  //  }
+//});
 
 const app = express ();
 
